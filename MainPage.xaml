@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ListaZakupów.MainPage">
+    <ContentPage.Resources>
+        <StyleSheet Source="/Resources/Styles/Main.css" />
+    </ContentPage.Resources>
+    <Shell.TitleView>
+        <Grid>
+            <Label Text="System losowania ucznia do odpowiedzi" x:Name="Header"/>
+        </Grid>
+    </Shell.TitleView>
+    
+    <StackLayout>
+        <HorizontalStackLayout x:Name="HappyBox">
+            <Label Text="Szczęśliwy numerek: " StyleClass="HappyNumberClass" HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="Happy" StyleClass="HappyNumberClass" HorizontalOptions="CenterAndExpand"/>
+        </HorizontalStackLayout>
+        
+
+        <HorizontalStackLayout x:Name="StudentBox">
+            <Picker x:Name="pickerKlasy" StyleClass="StudentClass" Title="Wybierz klasę"/>
+            <Entry x:Name="txtUczen" StyleClass="StudentClass" Placeholder="Wpisz imię ucznia"/>
+        </HorizontalStackLayout>
+        
+        
+        <HorizontalStackLayout x:Name="ButtonBox">
+            <Button Text="Wczytaj uczniów" Clicked="WczytajUczniow_Clicked" StyleClass="ButtonClass"/>
+            <Button Text="Dodaj ucznia" Clicked="DodajUcznia_Clicked" StyleClass="ButtonClass"/>
+            <Button Text="Losuj ucznia" Clicked="LosujUcznia_Clicked" StyleClass="ButtonClass"/>
+            <Button Text="Edytuj liste uczniów" Clicked="Edit_Clicked" StyleClass="ButtonClass"/>
+        </HorizontalStackLayout>
+        
+        
+        <CollectionView 
+            x:Name="studentsContainer" 
+            SelectionMode="Single" 
+
+            ItemsLayout="VerticalList">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <HorizontalStackLayout>
+                        <Label x:Name="NP" Text="{Binding np}" StyleClass="ListClass" />
+                        <Label x:Name="PersonName" Text="{Binding Name}" StyleClass="ListClass"/>
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </StackLayout>
+    
+
+</ContentPage>

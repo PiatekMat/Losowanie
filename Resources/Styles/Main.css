@@ -1,0 +1,42 @@
+^contentPage {
+    background-color: #333355;
+    color: white;
+}
+#Header {
+    background-color: #333355;
+    color: white;
+    font-size: 30;
+}
+#HappyBox{
+    text-align:center;
+    padding:20;
+
+}
+.HappyNumberClass{
+    font-size: 15;
+    margin-right:20;
+}
+#StudentBox {
+    text-align: center;
+    padding: 20;
+}
+.StudentClass {
+    font-size: 15;
+    margin-right: 20;
+}
+#txtUczen{
+    width: 250;
+}
+#ButtonBox {
+    text-align: center;
+    padding: 20;
+}
+.ButtonClass {
+    margin-right: 20;
+    width: 200;
+    color: #333355;
+}
+.ListClass{
+    font-size: 20;
+}
+

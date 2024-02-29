@@ -1,0 +1,23 @@
+^contentPage {
+    background-color: #333355;
+    color: white;
+}
+
+#Header {
+    background-color: #333355;
+    color: white;
+    font-size: 30;
+}
+#UczenList {
+    font-size: 20;
+}
+#ButtonBox {
+    text-align: center;
+    padding: 20;
+}
+.ButtonClass {
+    background-color: white;
+    margin-right: 20;
+    width: 200;
+    color: #333355;
+}
